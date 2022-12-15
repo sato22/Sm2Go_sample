@@ -57,6 +57,8 @@ func OneStep() {
 		if oneeod == Do {
 			countdownDo()
 			if EndCond() {
+				// EndCondFunc()
+
 				oneCurrentState = AlarmOn
 				if debug {
 					logger.Println("State is changed: Countdown to AlarmOn")
@@ -64,6 +66,8 @@ func OneStep() {
 				oneeod = Exit
 			}
 			if StopCond() {
+				// StopCondFunc()
+
 				oneCurrentState = TimerSet
 				if debug {
 					logger.Println("State is changed: Countdown to TimerSet")
@@ -74,6 +78,7 @@ func OneStep() {
 		if oneeod == Exit {
 			countdownExit()
 			oneeod = Entry
+
 		}
 	case TimerSet:
 		if oneeod == Entry {

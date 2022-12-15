@@ -121,17 +121,20 @@ func alarmonExit() {
 }
 
 func countdownEntry() {
-	// nothing to do
+	count = 0
 }
 
 func countdownDo() {
 	count++
-
-	if count == countSecond {
-		countDown()
-		count = 0
-	}
 }
+
+// func EventCondFunc() {
+// 	countDownSecDisplay()
+// }
+
+// func EventCond() {
+// 	return count == countSecond
+// }
 
 func countdownExit() {
 	// nothing to do

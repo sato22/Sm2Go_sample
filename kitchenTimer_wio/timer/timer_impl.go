@@ -142,6 +142,7 @@ func timersetEntry() {
 }
 
 func timersetDo() {
+	// 合成状態で記述
 	if !buttonL.Get() {
 		setMinute()
 	} else if !buttonM.Get() {
@@ -196,3 +197,5 @@ func StartCond() bool {
 func SetTimeCond() bool {
 	return (!buttonL.Get() || !buttonM.Get())
 }
+
+// 合成状態と普通の状態で
